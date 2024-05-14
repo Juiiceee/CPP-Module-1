@@ -6,7 +6,7 @@ int	replace(std::ifstream &ifile, std::string filename, std::string s1, std::str
 	int pos;
 	int	nb = 0;
 
-	filename = filename.substr(0,filename.find(".")) + ".replace";
+	filename = filename.substr(0,filename.find('.')) + ".replace";
 	std::ofstream ofile(filename.c_str());
 	if (!ofile)
 	{
