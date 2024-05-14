@@ -2,15 +2,12 @@
 #include <string>
 #include <iostream>
 
-HumanB::HumanB(std::string name)
+HumanB::HumanB(std::string name) : _name(name), _weapon(NULL)
 {
-	this->_name = name;
-	this->_weapon = NULL;
 }
 
 HumanB::~HumanB()
 {
-	
 }
 
 void	HumanB::setWeapon(Weapon &weapon)
