@@ -1,6 +1,6 @@
 #include "sed.hpp"
 
-int	replace(std::ifstream &ifile, std::string filename, std::string s1, std::string s2)
+int	replace(std::ifstream &ifile, std::string filename, const std::string &s1, const std::string &s2)
 {
 	std::string line;
 	int pos;
