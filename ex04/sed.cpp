@@ -19,10 +19,15 @@ int	replace(std::ifstream &ifile, std::string filename, const std::string &s1, c
 	ifile.seekg(0,std::ios::beg);
 	while (std::getline(ifile, line))
 	{
-		pos = 0;
 		pos = line.find(s1);
-		if (pos > 0)
-			line.erase(pos, s1.length()).insert(pos, s2);
+		while (1)
+		{
+			pos = line.find(s1);
+			if (pos > 0)
+				line.erase(pos, s1.length()).insert(pos, s2);
+			if (pos < 1)
+				break;
+		}
 		ofile << line;
 		if (--nb > 0)
 			ofile << std::endl;
